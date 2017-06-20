@@ -1,0 +1,7 @@
+org.ops4j.pax.jdbc:pax-jdbc-spec:0.6.0
+org.ops4j.pax.jdbc:pax-jdbc-oracle:1.1.0
+org.ops4j.pax.jdbc:pax-jdbc-postgresql:0.4.0
+org.ops4j.pax.jdbc:pax-jdbc-mysql:1.1.0
+org.ops4j.pax.jdbc:pax-jdbc-mssql:1.1.0
+org.ops4j.pax.jdbc:pax-jdbc-config:1.1.0
+org.ops4j.pax.jdbc:pax-jdbc:1.1.0

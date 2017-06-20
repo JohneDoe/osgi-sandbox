@@ -1,0 +1,62 @@
+# General Options
+#project.dependson       = ${p-dependson;:}
+#project.bootclasspath   = ${p-bootclasspath;:}
+#project.buildpath       = ${p-buildpath;:}
+#project.sourcepath      = ${p-sourcepath;:}
+#project.allsourcepath   = ${p-allsourcepath;:}
+#project.output          = ${p-output}
+#project.testpath        = ${p-testpath;:}:${workspace}/cnf/lib/testng/testng-6.5.2.jar
+
+-verbose:     true
+#project:      ${basedir}
+#src:          src
+#bin:          bin
+#target-dir:   generated
+#target:       ${project}/${target-dir}
+#build:        ${workspace}/cnf
+#p:            ${basename;${project}}
+#project.name: ${p}
+
+# Java Compiler Options
+java:         java
+javac:        javac
+javac.source: 1.8
+javac.target: 1.8
+javac.debug:  on
+
+# Bnd Options
+#-sources:       true
+#-sourcepath:    ${project}/src
+#-buildpath:     osgi.annotation;version='[6.0, 6.1)'
+
+# Default Bundle headers
+
+Bundle-DocURL: 
+Bundle-License: depends..
+Bundle-Vendor: 
+Bundle-ContactAddress: 
+Bundle-Icon: icons/logo_64x64.png;size=64
+
+-includeresource: \
+	icons=${workspace}/cnf/icons
+
+# Remove certain generated headers that we don't need
+-removeheaders: Bnd-LastModified,Tool,Created-By,Private-Package
+
+# Common properties used for all integration tests.
+#itestrunprops: \
+#	org.osgi.service.http.port=28080,\
+#	org.apache.felix.eventadmin.Timeout=0,\
+#	org.apache.felix.log.storeDebug=true,\
+#	org.apache.felix.log.maxSize=1000
+
+#maven props
+-groupid:	my.sandbox
+-pom:		version=${versionmask;===s;${@version}}
+#-snapshot: ${tstamp}-SNAPSHOT
+-snapshot: -SNAPSHOT
+# Enable semantic versioning for all bundles
+-baseline: *
+
+# Ignore.jasper files by baselining
+-diffignore: *.jasper

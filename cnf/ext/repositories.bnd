@@ -1,0 +1,22 @@
+-plugin: \
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name='Local', \
+	aQute.bnd.deployer.repository.LocalIndexedRepo;pretty=true;readonly=false;name="LocalLib";local=${workspace}/cnf/localrepo,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Compile";index=${.}/mvn_Compile.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_DB";index=${.}/mvn_DB.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Jasper";index=${.}/mvn_Jasper.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Jersey";index=${.}/mvn_Jersey.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+    aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Felix";index=${.}/mvn_Felix.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Log";index=${.}/mvn_Log.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_OSGi";index=${.}/mvn_OSGi.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Metering";index=${.}/mvn_Metering.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Other";index=${.}/mvn_Other.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_PdfBox";index=${.}/mvn_PdfBox.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Quarz";index=${.}/mvn_Quarz.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Swagger";index=${.}/mvn_Swagger.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+	aQute.bnd.repository.maven.provider.MavenBndRepository;name="mvn_Test";index=${.}/mvn_Test.maven;releaseUrl=https://repo.maven.apache.org/maven2/;readOnly=true,\
+
+
+# Reposetorys
+-buildrepo: Local
+
+

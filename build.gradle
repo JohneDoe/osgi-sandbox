@@ -1,0 +1,60 @@
+buildscript {
+  repositories {
+    maven {url 'https://bndtools.ci.cloudbees.com/job/bnd.master/lastSuccessfulBuild/artifact/dist/bundles'}
+  }
+  
+  dependencies {
+    classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:+'
+	}
+}
+apply plugin: 'java'
+apply plugin: 'biz.aQute.bnd.workspace'
+
+subprojects {
+
+  if (plugins.hasPlugin('biz.aQute.bnd')) {
+  
+	configurations {
+		jasperreports {
+			transitive = true
+		}
+	}
+	
+	repositories {
+		mavenCentral()
+		jcenter()
+		maven{url "http://jasperreports.sourceforge.net/maven2/"}
+		maven{url "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/"}
+	}
+	
+	dependencies {
+		jasperreports 'net.sf.jasperreports:jasperreports:6.3.1','org.codehaus.groovy:groovy-all:2.3.6'
+	}
+	
+		task jasperCompile {		
+			dependsOn classes
+			doLast {
+				//Für debugging
+				//println project.sourceSets.main.runtimeClasspath
+				//project.sourceSets.main.runtimeClasspath.each { File file ->
+				//	println file
+				//}
+
+				def jasperFromDir = file('./bin')
+				def jasperCPDir = file('./bin')
+				def fullcp = files(project.sourceSets.main.runtimeClasspath)
+				ant {
+					taskdef(name: 'jrc', classname: 'net.sf.jasperreports.ant.JRAntCompileTask', classpath: configurations.jasperreports.asPath)
+					jrc(srcdir: jasperFromDir, destdir: jasperFromDir) {
+						classpath(path: fullcp.asPath)
+						include(name:'**/*.jrxml')
+					}
+				}	
+			}
+		}		
+	
+		jar {
+			dependsOn jasperCompile
+		}
+	}
+}

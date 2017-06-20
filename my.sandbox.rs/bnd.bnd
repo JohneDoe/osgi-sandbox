@@ -1,0 +1,16 @@
+-sub: *.bnd
+-buildpath: \
+	osgi.annotation,\
+	osgi.cmpn,\
+	osgi.core,\
+	org.glassfish.jersey.core.jersey-client,\
+	org.glassfish.jersey.core.jersey-common,\
+	org.glassfish.jersey.core.jersey-server,\
+	javax.ws.rs-api,\
+	org.apache.felix.http.servlet-api,\
+	org.glassfish.jersey.containers.jersey-container-servlet,\
+	org.glassfish.jersey.containers.jersey-container-servlet-core,\
+	org.glassfish.jersey.media.jersey-media-jaxb,\
+	org.glassfish.jersey.media.jersey-media-json-jackson,\
+	org.glassfish.jersey.media.jersey-media-multipart,\
+	org.glassfish.jersey.media.jersey-media-sse
