@@ -7,13 +7,7 @@ Bundle-Version: 0.0.0
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=my.sandbox.batik)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.servicemix.bundles.batik)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.servicemix.specs.jaxp-api-1.4)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.runtime)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.jline)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)'
+	osgi.identity;filter:='(osgi.identity=org.apache.servicemix.specs.jaxp-api-1.4)'
 -runbundles: \
 	my.sandbox.batik;version=snapshot,\
 	org.apache.felix.metatype;version='[1.1.2,1.1.3)',\
