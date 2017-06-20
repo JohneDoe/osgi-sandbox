@@ -1,0 +1,7 @@
+-buildpath: \
+	osgi.annotation,\
+	osgi.cmpn,\
+	osgi.core,\
+	org.apache.servicemix.bundles.batik
+Export-Package: my.sandbox.batik
+Bundle-Version: 1.0.0.SNAPSHOT

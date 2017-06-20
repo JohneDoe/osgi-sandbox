@@ -27,3 +27,6 @@ org.apache.felix:org.apache.felix.webconsole:jar:all:4.3.4
 #org.apache.felix:org.apache.felix.webconsole.plugins.subsystems:0.1.0
 #org.apache.felix:org.apache.felix.webconsole.plugins.upnp:1.0.6
 #org.apache.felix:org.apache.felix.webconsole.plugins.useradmin:1.0.2
+
+
+org.eclipse.platform:org.eclipse.osgi:jar:3.11.3
