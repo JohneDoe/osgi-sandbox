@@ -21,7 +21,7 @@
 	javax.validation.api;version='[1.1.0,1.1.1)',\
 	javax.ws.rs-api;version='[2.0.99,2.0.100)',\
 	my.sandbox.rs.server;version=snapshot,\
-	my.sandbox.rs.server.example;version=snapshot,\
+	my.sandbox.rs.server.example2;version=snapshot,\
 	org.apache.felix.configadmin;version='[1.8.14,1.8.15)',\
 	org.apache.felix.eventadmin;version='[1.4.8,1.4.9)',\
 	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\

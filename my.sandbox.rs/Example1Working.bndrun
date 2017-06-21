@@ -5,7 +5,7 @@
 	osgi.identity;filter:='(osgi.identity=org.glassfish.hk2.osgi-resource-locator)',\
 	osgi.identity;filter:='(osgi.identity=org.glassfish.jersey.inject.jersey-hk2)',\
 	osgi.identity;filter:='(osgi.identity=my.sandbox.rs.server)',\
-	osgi.identity;filter:='(osgi.identity=my.sandbox.rs.server.example)'
+	osgi.identity;filter:='(osgi.identity=my.sandbox.rs.server.example1)'
 
 -runfw: org.apache.felix.framework;version='[5.6.4,5.6.4]'
 -runee: JavaSE-1.8
